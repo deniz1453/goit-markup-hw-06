@@ -1,0 +1,737 @@
+:root {
+  --iris: #4d5ae5;
+  --ocean: #404bbf;
+  --navyblue: #2e2f42;
+  --green: #31d0aa;
+  --slate: #434455;
+  --lightslate: #8e8f99;
+  --cornflower: #e7e9fc;
+  --cloud: #f4f4fd;
+  --white: #ffffff;
+  --dairy: #fcfcfc;
+  --roboto: "Roboto", sans serif;
+  --raleway: "Raleway", sans serif;
+}
+
+/* visually-hidden */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* < Header area / Navbar / Address  Logo
+ Başlık alanı / Gezinme çubuğu / Adresleyici > */
+.logo-link {
+  font-family: var(--raleway);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--iris);
+  margin-right: 76px;
+}
+.logo-span {
+  color: var(--navyblue);
+}
+.logo-span-footer {
+  color: var(--cloud);
+}
+.navbar-link {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--navyblue);
+  padding: 24px 0;
+  position: relative;
+  color: var(--slate);
+}
+.navbar-link:active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 2px;
+  width: 100%;
+  background-color: var(--ocean);
+  transition: width 0.3s ease;
+}
+.navbar-link:hover {
+  color: var(--ocean);
+}
+.address {
+  font-style: normal;
+  margin-left: 332px;
+}
+.address-link {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--slate);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.address-link:hover,
+.address-link:focus {
+  color: var(--ocean);
+}
+.header {
+  border-bottom: 1px solid;
+  border-color: var(--cornflower);
+  padding-top: 24px;
+  padding-bottom: 24px;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+  max-width: 1440px;
+  border-right: none;
+}
+.social-svg-link {
+  width: 100%;
+  height: 100%;
+  background-color: var(--iris);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.social-icon,
+.hover-icon {
+  height: 40px;
+}
+.social-svg-link:hover,
+.social-svg-link:focus {
+  background-color: var(--ocean);
+}
+.social-icon {
+  fill: var(--cloud);
+}
+.social-link-footer {
+  width: 100%;
+  height: 100%;
+  background-color: var(--iris);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 250ms ease;
+}
+.social-link-footer:hover,
+.social-link-footer:focus {
+  background-color: var(--green);
+}
+
+/* < Body / Section > */
+.feature,
+.ourteam-section,
+.ourportfolio-section {
+  padding: 120px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+body {
+  font-family: var(--roboto);
+  overflow-x: hidden;
+}
+* {
+  font-family: inherit;
+}
+
+.hero {
+  background-color: #2e2f42;
+  padding: 188px 0;
+  display: flex;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/hero.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.p-content {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--slate);
+  text-align: center;
+}
+.p-content-fix {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--slate);
+  text-align: left;
+}
+.p-content-our {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--slate);
+}
+.footer-social-content {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--white);
+  margin-bottom: 16px;
+}
+.p-ourport-content {
+  position: absolute;
+  top: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--cloud);
+  padding: 40px 32px;
+  background-color: var(--iris);
+  height: 100%;
+  width: 100%;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.footer-content {
+  color: var(--cloud);
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  max-width: 264px;
+}
+.ourteam-section {
+  background-color: var(--cloud);
+}
+.team-member {
+  padding: 32px 0;
+}
+.our-div {
+  padding: 32px 16px;
+  border: 1px solid;
+  border-color: var(--cornflower);
+  border-top: none;
+  /* margin-bottom: 8px; */
+  position: relative;
+  overflow: hidden;
+}
+.svg-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 112px;
+  background-color: var(--cloud);
+  border-radius: 4px;
+  border: 1px solid var(--lightslate);
+  margin-bottom: 8px;
+}
+/* UL-Li List  */
+.li-our-team {
+  background-color: var(--white);
+  width: calc((100% - 72px) / 4);
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+.navbar-ul {
+  display: flex;
+  gap: 40px;
+}
+.feature-ul {
+  display: flex;
+  gap: 24px;
+}
+.feature-li {
+  width: calc((100% - 72px) / 4);
+}
+.our-ul {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  row-gap: 48px;
+}
+.our-li {
+  width: calc((100% - 72px) / 3);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border-top: none;
+}
+.our-li:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+.our-li:hover .p-ourport-content {
+  transform: translateY(0%);
+}
+.socialmedia-ul {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+.socialmedia-li {
+  width: 40px;
+  height: 40px;
+}
+.social-ul-footer {
+  display: flex;
+  gap: 16px;
+}
+.social-li-footer {
+  width: 45px;
+  height: 45px;
+}
+/* < Titles / Başlıklar > */
+.hone-title {
+  font-size: 56px;
+  line-height: 1.07;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--white);
+  max-width: 496px;
+  margin-left: 320px;
+  padding-bottom: 48px;
+}
+.htwo-title {
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: var(--navyblue);
+  margin-bottom: 72px;
+}
+.hthree-title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--navyblue);
+  margin-bottom: 8px;
+  text-align: center;
+}
+.hthree-title-our {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--navyblue);
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+/* < Butonlar / Buttons > */
+.button-item {
+  background-color: var(--iris);
+  font-family: var(--roboto);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--white);
+  margin: 0 auto;
+  min-width: 169px;
+  height: 56px;
+  border: none;
+  border-radius: 4px;
+  display: block;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.button-item:hover,
+.button-item:focus {
+  background-color: var(--ocean);
+}
+/* Footer */
+.thefooter {
+  background-color: var(--navyblue);
+  padding: 100px 0;
+}
+.footer-logo {
+  display: inline-block;
+  margin-bottom: 16px;
+}
+/* Display Css Part */
+.header-container {
+  display: flex;
+  padding-left: 156px;
+}
+.container {
+  max-width: 1158px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+}
+.hid-div {
+  position: relative;
+  overflow: hidden;
+}
+.footer-div {
+  margin-right: 120px;
+}
+.div-footer {
+  display: flex;
+  align-items: baseline;
+}
+.text-x > p,
+.text-x > h3 {
+  display: flex;
+  text-align: left;
+}
+.social-link-footer {
+  position: relative;
+}
+
+.footer-svg,
+.hover-svg {
+  display: block; /* Her iki SVG'yi de blok olarak göster */
+  height: 40px;
+}
+
+.social-link-footer:hover .footer-svg {
+  display: none; /* Normal SVG'yi gizle */
+}
+
+.social-link-footer:hover .hover-svg {
+  display: block; /* Hover SVG'yi göster */
+}
+
+/* Varsayılan olarak hover SVG'yi gizle */
+.hover-svg {
+  display: none;
+}
+
+.social-svg-link {
+  position: relative; /* İki SVG'nin üst üste gelmesi için */
+}
+
+.social-icon {
+  display: block; /* Normal SVG'yi göster */
+}
+
+.hover-icon {
+  display: none; /* Başlangıçta hover SVG'yi gizle */
+}
+
+.social-svg-link:hover .social-icon {
+  display: none; /* Normal SVG'yi gizle */
+}
+
+.social-svg-link:hover .hover-icon {
+  display: block; /* Hover SVG'yi göster */
+}
+/* Footer Label */
+.footer-label-div {
+  margin-left: 80px;
+}
+.footer-form-paragraph {
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--white);
+}
+.footer-form {
+  display: flex;
+  gap: 24px;
+}
+.form-input {
+  width: 264px;
+  height: 40px;
+  border: 1px solid var(--white);
+  background-color: transparent;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  padding-left: 16px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+.footer-button {
+  min-width: 165px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--roboto);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  background-color: var(--iris);
+  border: none;
+  border-radius: 4px;
+  color: var(--white);
+}
+.footer-icon-svg {
+  margin-left: 16px;
+}
+/* Modal  */
+.modal-body-div {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(46, 47, 66, 0.4);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 408px;
+  min-height: 584px;
+  background: #fcfcfc;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 72px 24px 24px 24px;
+}
+.modal-button {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e7e9fc;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-button:hover,
+.modal-button:focus {
+  background-color: #404bbf;
+  border: none;
+}
+.modal-icon-svg {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-button:hover .modal-icon-svg,
+.modal-button:focus .modal-icon-svg {
+  fill: #ffffff;
+}
+.modal-paragraph {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+  margin-bottom: 16px;
+}
+.modal-form-div {
+  margin-bottom: 8px;
+}
+.modal-label {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+  display: block;
+  margin-bottom: 4px;
+}
+.modal-form-div-div {
+  position: relative;
+}
+.modal-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  background-color: transparent;
+  padding-left: 38px;
+  outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-input:focus {
+  border-color: #4d5ae5;
+}
+.label-svg {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-input:focus + .label-svg {
+  fill: #4d5ae5;
+}
+.modal-textarea {
+  width: 100%;
+  height: 120px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  background-color: transparent;
+  padding: 8px 16px;
+  outline: transparent;
+  resize: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-textarea:focus {
+  border-color: #4d5ae5;
+}
+.text-area-div {
+  margin-bottom: 24px;
+}
+.modal-span {
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
+}
+.textarea-input:checked + label .modal-span {
+  background-color: #404bbf;
+  border: none;
+  fill: #f4f4fd;
+}
+.checkbox-link {
+  color: #4d5ae5;
+}
+.modal-button-two {
+  display: block;
+  min-width: 169px;
+  height: 56px;
+  font-family: var(--roboto);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  cursor: pointer;
+  background-color: #4d5ae5;
+  border: none;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin: 0 auto;
+}
+.modal-form .modal-form-div:nth-last-child(3) {
+  margin-bottom: 16px;
+}
+/* İlk SVG varsayılan durumda görünür olacak */
+.icon-hover {
+  display: none; /* Hover ikonu başlangıçta gizli */
+}
+
+/* Hover ve focus durumlarında ikinci SVG'yi göster */
+.modal-span:hover .icon-hover,
+.modal-span:focus .icon-hover {
+  display: inline-block; /* Hover SVG'yi göster */
+}
+
+.modal-span:hover .icon-default,
+.modal-span:focus .icon-default {
+  display: none; /* Varsayılan SVG'yi gizle */
+}
+/* Checkbox işaretlendiğinde SVG'yi değiştir */
+.textarea-input:checked + label .modal-span .icon-hover {
+  display: inline-block; /* İşaretlendiğinde hover SVG'yi göster */
+}
+
+.textarea-input:checked + label .modal-span .icon-default {
+  display: none; /* İşaretlendiğinde varsayılan SVG'yi gizle */
+}
+/*  */
+/* Hover SVG başlangıçta gizli */
+.icon-hover {
+  display: none;
+}
+
+/* Hover ve focus durumunda ikinci SVG'yi göster */
+.modal-button:hover .icon-hover,
+.modal-button:focus .icon-hover {
+  display: inline-block;
+}
+
+.modal-button:hover .icon-default,
+.modal-button:focus .icon-default {
+  display: none; /* Varsayılan SVG'yi gizle */
+}
+
+/* Tıklandığında (active durumu) SVG'yi değiştir */
+.modal-button:active .icon-hover {
+  display: inline-block;
+}
+
+.modal-button:active .icon-default {
+  display: none;
+}
